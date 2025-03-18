@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template_string
+import signal
 
 app = Flask(__name__)
 
@@ -46,6 +47,13 @@ HTML_TEMPLATE = """
 </body>
 </html>
 """
+
+def clean_shutdown(signum, frame):
+    print('Shutting down...')
+    exit(0)
+
+signal.signal(signal.SIGINT,clean_shutdown)
+signal.signal(signal.SIGTERM,clean_shutdown)
 
 @app.route('/')
 def home():
