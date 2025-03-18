@@ -24,4 +24,4 @@ jobs:
       with:
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/internship-task2-tremend:${{ github.sha }}
-        
+        file: 2-app/Dockerfile
