@@ -3,11 +3,11 @@
 ## Install the necessary packages
 
 - apt update
-- apt install dnsutils - Press Y to confirm (for dig command)
+- apt install dnsutils -> Press Y to confirm (for dig command)
 - apt-get install -y iputils-ping (for ping command)
-- apt-install vim - Press Y to confirm, select the continent and the country you are from (for vim editor)
+- apt-install vim -> Press Y to confirm, select the continent and the country you are from (for vim editor)
 - apt-get install netcat-traditional (for nc command)
-- apt install curl - Press Y to confirm (for curl command)
+- apt install curl -> Press Y to confirm (for curl command)
 
 ## 1. Public IP for cloudfare.com
 
@@ -58,9 +58,9 @@ is used to resolve the IP addresses.
 
 ## 5. Install and verify that Nginx service is running 
 
-- apt install nginx - Press Y to confirm
-- service nginx start - to start the service
-- service nginx status - to check the status of the service (active)
+- apt install nginx -> Press Y to confirm
+- service nginx start -> to start the service
+- service nginx status -> to check the status of the service (active)
 
 ## 6. Find the Listening Port for Nginx
 
@@ -76,7 +76,7 @@ is used to resolve the IP addresses.
 - edit the file by pressing i
 - change the listening port to 8080
 - exit and save the file :wq
-- service nginx restart - to restart the service
+- service nginx restart -> to restart the service
 - ss -tuln | grep 8080 -> to check if the port is open
 
 ### 2. Modify the default HTML page
@@ -86,7 +86,7 @@ is used to resolve the IP addresses.
 - edit the file by pressing i
 - change the title of the file
 - exit and save the file :wq
-- service nginx restart - to restart the service
+- service nginx restart -> to restart the service
 - open the browser and go to the IP address of the server with the port number
 - use curl http://localhost:8080 to check the modification
 
