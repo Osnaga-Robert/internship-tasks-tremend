@@ -3,11 +3,11 @@
 ## Install the necessary packages
 
 - apt update
-- apt install dnsutils -> Press Y to confirm (for dig command)
-- apt-get install -y iputils-ping (for ping command)
-- apt-install vim -> Press Y to confirm, select the continent and the country you are from (for vim editor)
+- apt install dnsutils -y -> for dig command
+- apt-get install -y iputils-ping -> for ping command
+- apt install vim -y -> select the continent and the country you are from (for vim editor)
 - apt-get install netcat-traditional (for nc command)
-- apt install curl -> Press Y to confirm (for curl command)
+- apt install curl -y -> for curl command
 
 ## 1. Public IP for cloudfare.com
 
@@ -58,7 +58,7 @@ is used to resolve the IP addresses.
 
 ## 5. Install and verify that Nginx service is running 
 
-- apt install nginx -> Press Y to confirm
+- apt install nginx -y
 - service nginx start -> to start the service
 - service nginx status -> to check the status of the service (active)
 
@@ -90,3 +90,13 @@ is used to resolve the IP addresses.
 - open the browser and go to the IP address of the server with the port number
 - use curl http://localhost:8080 to check the modification
 
+# Conclusion
+
+For first time working with a linux container, I can say that is very primitive\
+in terms of security and configuration. I had to install some packages to be able\
+that in many vm's are already installed. There is not even de man command to get\
+because the container needed to be so small. I had to use the internet to find\
+the commands that I needed to install the packages and some commands for nginx.\
+I founded [this](https://ubuntu.com/tutorials/install-and-configure-nginx#1-overview) tutorial for my use.
+To my surprise, when I tested everything, the IP's from dig command were the same even if\
+I changed the DNS server to google's public DNS.
