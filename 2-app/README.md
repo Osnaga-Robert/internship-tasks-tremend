@@ -28,7 +28,7 @@
     - --name flag: to name the container
   - docker ps -> to check if the container is running
   - access the application by going to http://localhost:8080 in the browser
-  - ![image](internship-tasks-tremend/2-app/images/image.png)
+  - ![image](images/image.png)
 
 ## 4. Set up a Docker Registry
 
@@ -46,7 +46,7 @@
 
 - from the repository, go to the Actions tab
 - add a new auto-generated workflow called Docker Image
-- ![workflow](internship-tasks-tremend/2-app/images/workflow.png)
+- ![workflow](images/workflow.png)
 - push the changes to the repository
 - pull the changes from the repository to the local machine
 - modify genearated yml file to build and push the image to the Docker Hub
@@ -59,7 +59,7 @@
       - file to specify the Dockerfile location
       - context to specify the build context
 - can check Docker Hub to see the pushed image [here](https://hub.docker.com/repository/docker/robert2308/internship-task2-tremend/tags)
-- ![actions](internship-tasks-tremend/2-app/images/actions.png)
+- ![actions](images/actions.png)
 
 ## Bonus
 
@@ -70,14 +70,14 @@
 - to test the signal handler, run the container and stop it using the following command:
   - docker stop calculator-container
   - check the logs to see the message printed by the signal handler
-- ![logs](internship-tasks-tremend/2-app/images/logs.png)
+- ![logs](images/logs.png)
 
 ### 2. Configure environment variables for sensitive information
 
 - for github actions, the Docker Hub username and password are stored as secrets
 - the secrets are accessed in the workflow using ${{ secrets.SECRET_NAME }}
 - the secrets are set in the repository settings under Secrets
-- ![secrets](internship-tasks-tremend/2-app/images/secrets.png)
+- ![secrets](images/secrets.png)
 
 # Conclusion
 
